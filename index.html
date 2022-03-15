@@ -21,6 +21,7 @@
 	 
 	 #bold{
 	 border-right: 10px solid #ff8da1;
+	 border-left: 10px solid #ff8da1;
 	 }
 	 
 	
@@ -36,9 +37,9 @@
 	   $("#bold").click(
 	     function(){
 		     $(this).animate({
-			 "left": "250px"
+			 left: "250px"
 			 }, 5000, function(){
-                    $(this).animate({right: "+=250px"}, 5000);
+                    $(this).animate({left: "800px"}, 5000);
                 });
                 
 		 }
