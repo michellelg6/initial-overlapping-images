@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Overlapping Images</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<style>
+	 *{
+	 text-align:center;
+	 }
+	 
+	 img{
+	 position:absolute;
+	 width: 500px;
+	 height: 300px;
+	 width:25%;
+	 top:0;
+	 left:50%;
+	 transform:translateX(-50%);
+	 }
+	 
+	 #bold{
+	 border-right: 10px solid #ff8da1;
+	 }
+	 
+	
+	</style>
+</head>
+<body>
+  <div>
+	<img src="unbold.png" id = "unbold" alt="Unbold Version">
+	<img src="bold.png" id = "bold" alt="Bold Version">
+  </div>
+	<script>
+	 $(function(){
+	   $("#bold").click(
+	     function(){
+		     $(this).animate({
+			 "left": "250px"
+			 }, 5000, function(){
+                    $(this).animate({right: "+=250px"}, 5000);
+                });
+                
+		 }
+	   );
+	 });
+	</script>
+</body>
+</html>
