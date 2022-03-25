@@ -12,14 +12,14 @@
 	 text-align:center;
 	 top:0;
 	 left:50%;
-	 transform:translateX(-50%);
 	 font-size: 45px;
+	 transform:translateX(-50%);
 	 white-space: nowrap;
 	 }
 	 
+   
 	 #bold{
 	 font-weight: bolder;
-	 background: #fff;
 	 }
 	 
 	
@@ -48,8 +48,11 @@
   </div>
 	<script>
 	 $(function(){
+	 
+	 $("#unbold").hide();
 	   $("#bold").click(
 	     function(){
+		    $("#unbold").fadeIn("slow");
 		     $(this).animate({
 			 left: "250px"
 			 }, 5000, function(){
